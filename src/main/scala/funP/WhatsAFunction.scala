@@ -40,8 +40,19 @@ object WhatsAFunction {
   
   // all functions are instances of FunctionX with apply methods
 
-  def main(args: Array[String]): Unit = {
+  def afunction(i: Int): Int = i*2
+  val afunction2: (String, String) => String = { (a,b) =>
+    a + b
+  }
+  
+  val supperAdded = new Function[Int, Function1[Int, Int]] {
+    override def apply(x: Int) = new Function1[Int, Int] {
+      override def apply(y: Int): Int = x + y
+    }
+  }
 
+  def main(args: Array[String]): Unit = {
+    println(afunction2("a","b"))
   }
 
 }
