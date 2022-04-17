@@ -1,4 +1,4 @@
-package power
+package patternMatching
 import practice.*
 object AllThePatterns {
 

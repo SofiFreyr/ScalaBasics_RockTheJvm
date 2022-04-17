@@ -40,6 +40,7 @@ object HOFsCurrying {
   val standardFormat: (Double => String) = curriedFormatter("%4.2f") // (x: Double) => "%4.2f".format(x)
   val preciseFormat: (Double => String) = curriedFormatter("%10.8f") // (x: Double) => ""%10.8f".format(x)
 
+
   def main(args: Array[String]): Unit = {
     println(tenThousand)
     //println(tenThousand_v2(1))
